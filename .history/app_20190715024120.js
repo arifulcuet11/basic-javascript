@@ -1,7 +1,6 @@
 'use strict'
-import * as dt from './date.js';
-
-let MinuteConversion= (second)=>{
+import {DateFormate} from './date';
+module.exports.MinuteConversion= (second)=>{
     if(second == null || second == undefined){
         return 0;
     }
@@ -15,7 +14,7 @@ let MinuteConversion= (second)=>{
     }
 }
 
-let HMSConversion= (second,t='s')=>{
+module.exports.HMSConversion= (second,t='s')=>{
     second = Number(second);
     var h = Math.floor(second / 3600);
     var m = Math.floor(second % 3600 / 60);
@@ -33,9 +32,6 @@ let HMSConversion= (second,t='s')=>{
     }
     return hDisplay + mDisplay + sDisplay; 
 }
-
-let DateConversion = (current_date, type) =>{
-     return dt.DateConversion(current_date, type);
+module.exports.DateConversion = (current_date, type) =>{
+     console.log(DateFormate(current_date, type))
 }
-
-export {MinuteConversion,HMSConversion,DateConversion}

@@ -1,6 +1,7 @@
 'use strict'
 import * as dt from './date.js';
 
+console.log(dt.DateConversion('asdasd','asdasdas'));
 let MinuteConversion= (second)=>{
     if(second == null || second == undefined){
         return 0;
@@ -35,7 +36,7 @@ let HMSConversion= (second,t='s')=>{
 }
 
 let DateConversion = (current_date, type) =>{
-     return dt.DateConversion(current_date, type);
+     console.log(dt.DateConversion(current_date, type))
 }
 
 export {MinuteConversion,HMSConversion,DateConversion}
