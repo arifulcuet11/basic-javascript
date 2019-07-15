@@ -1,6 +1,6 @@
 'user-strict'
 
-const dataFormate = [
+let dataFormate = [
    'DD-MM-YYYY',
    'YYYY-MM-DD',
    'MM-DD-YYYY',
@@ -13,7 +13,6 @@ const dataFormate = [
    'DD-MM-YYYY HH:MM:SS',
    'MM-DD-YYYY HH:MM:SS'
 ]
-const months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
 let convertDate = (current_Date, type) => {
    const dateType = dataFormate.find(x => x == type);
@@ -35,6 +34,8 @@ let convertDate = (current_Date, type) => {
    minutes = minutes.padStart(2,0);
    seconds = seconds.padStart(2,0);
 
+   current_datetime.getHours() + ":" + current_datetime.getMinutes() + ":" + current_datetime.getSeconds()
+
    if (dateType === 'DD-MM-YYYY') {
       let formatted_date = day + "-" + month + "-" + year;
       return formatted_date;
@@ -51,35 +52,6 @@ let convertDate = (current_Date, type) => {
       let formatted_date = year + "-" + month + "-" + day + ' '+ hours +':'+minutes +':'+seconds;
       return formatted_date;
    }
-   else if (dateType === 'DD MMM YYYY') {
-      let formatted_date = day +' ' + months[Number(month)-1] + ' ' + year;
-      return formatted_date;
-   }
-   else if (dateType === 'MM/DD/YYYY') {
-      let formatted_date = month + "/" + day + "/" + year;
-      return formatted_date;
-   }
-   else if (dateType === 'DD/MM/YYYY') {
-      let formatted_date = day + "/" + month + "/" + year;
-      return formatted_date;
-   }
-   else if (dateType === 'YYYY/MM/DD') {
-      let formatted_date = year + "/" + month + "/" + day;
-      return formatted_date;
-   }
-   else if (dateType === 'MMM DD YYYY') {
-      let formatted_date = months[Number(month)-1] + " " + day + " " + year;
-      return formatted_date;
-   }
-   else if (dateType === 'DD-MM-YYYY HH:MM:SS') {
-      let formatted_date = day + "-" + month + "-" + year + ' '+ hours +':'+minutes +':'+seconds;
-      return formatted_date;
-   }
-   else if (dateType === 'MM-DD-YYYY HH:MM:SS') {
-      let formatted_date = month + "-" + day + "-" + year + ' '+ hours +':'+minutes +':'+seconds;
-      return formatted_date;
-   }
-
 
    else {
       return 'Date formate not found.';

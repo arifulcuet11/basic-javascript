@@ -52,34 +52,9 @@ let convertDate = (current_Date, type) => {
       return formatted_date;
    }
    else if (dateType === 'DD MMM YYYY') {
-      let formatted_date = day +' ' + months[Number(month)-1] + ' ' + year;
+      let formatted_date = day +' ' + months[Number(month-1)] + ' ' + year;
       return formatted_date;
    }
-   else if (dateType === 'MM/DD/YYYY') {
-      let formatted_date = month + "/" + day + "/" + year;
-      return formatted_date;
-   }
-   else if (dateType === 'DD/MM/YYYY') {
-      let formatted_date = day + "/" + month + "/" + year;
-      return formatted_date;
-   }
-   else if (dateType === 'YYYY/MM/DD') {
-      let formatted_date = year + "/" + month + "/" + day;
-      return formatted_date;
-   }
-   else if (dateType === 'MMM DD YYYY') {
-      let formatted_date = months[Number(month)-1] + " " + day + " " + year;
-      return formatted_date;
-   }
-   else if (dateType === 'DD-MM-YYYY HH:MM:SS') {
-      let formatted_date = day + "-" + month + "-" + year + ' '+ hours +':'+minutes +':'+seconds;
-      return formatted_date;
-   }
-   else if (dateType === 'MM-DD-YYYY HH:MM:SS') {
-      let formatted_date = month + "-" + day + "-" + year + ' '+ hours +':'+minutes +':'+seconds;
-      return formatted_date;
-   }
-
 
    else {
       return 'Date formate not found.';
