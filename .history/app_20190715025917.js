@@ -1,6 +1,5 @@
 'use strict'
 import * as dt from './date.js';
-import * as bs from './basic.js'
 
 let MinuteConversion= (second)=>{
     if(second == null || second == undefined){
@@ -39,7 +38,4 @@ let DateConversion = (current_date, type) =>{
      return dt.DateConversion(current_date, type);
 }
 
-let DeepClone = (items) =>{
-   return bs.clone(items);
-}
-export {MinuteConversion,HMSConversion,DateConversion, DeepClone}
+export {MinuteConversion,HMSConversion,DateConversion}
