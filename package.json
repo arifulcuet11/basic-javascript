@@ -1,6 +1,6 @@
 {
   "name": "basic-javascript",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Here is some important javaScript code. Date conversion, Minute conversion, pdf print, array copy",
   "main": "app.js",
   "scripts": {
