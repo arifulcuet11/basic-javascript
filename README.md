@@ -1,6 +1,13 @@
 # Description
 
-This is simple conversion such as minute, hours, different date,list to pdf, list copy, parse html.
+This is simple conversion such as minute, hours, different date,list to pdf, list copy, Deepfreeze, parse html.
+```node
+MinuteConversion,
+HMSConversion,
+DateConversion, 
+DeepClone,//updated
+DeepFreeze, // new added
+```
 
 ## Installation
 
@@ -9,7 +16,6 @@ Use the package manager [npm](https://nodejs.org/en/) to install basic-javascrip
 ```bash
 npm i basic-javascript
 ```
-
 ## Usage
 
 ```node

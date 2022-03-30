@@ -42,4 +42,7 @@ let DateConversion = (current_date, type) =>{
 let DeepClone = (items) =>{
    return bs.clone(items);
 }
-export {MinuteConversion,HMSConversion,DateConversion, DeepClone}
+const DeepFreeze = (object) =>{
+    return bs.deepFreeze(object);
+}
+export {MinuteConversion,HMSConversion,DateConversion, DeepClone, DeepFreeze}
